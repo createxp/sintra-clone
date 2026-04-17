@@ -3,13 +3,41 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Base colors */
+  --base-color--black: #000000;
+  --base-color--white: #ffffff;
+  
+  /* Brand colors */
+  --color-primary: #3B82F6;
+  
+  /* Typography */
+  --font-size-heading: 64px;
+  --font-size-subheading: 20.8px;
+  --font-size-button: 17px;
+  
+  /* Spacing */
+  --button-padding-y: 12px;
+  --button-padding-x: 18px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-base-black: var(--base-color--black);
+  --color-base-white: var(--base-color--white);
+  --color-primary: var(--color-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-walsham: var(--font-walsham);
+
+  --font-size-heading: var(--font-size-heading);
+  --font-size-subheading: var(--font-size-subheading);
+  --font-size-button: var(--font-size-button);
+
+  --spacing-button-x: var(--button-padding-x);
+  --spacing-button-y: var(--button-padding-y);
 }
 
 @media (prefers-color-scheme: dark) {
