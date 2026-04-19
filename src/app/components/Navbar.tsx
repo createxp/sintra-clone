@@ -30,8 +30,8 @@ const ChevronDown = () => (
 
 const HamburgerIcon = () => (
   <svg
-    width="48"
-    height="48"
+    width="34"
+    height="34"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

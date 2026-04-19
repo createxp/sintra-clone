@@ -37,7 +37,7 @@ const Hero = () => {
           Never Sleep
         </h1>
 
-        <p className=" font-walsham font-medium text-[20px] md:text-[20px] leading-[1.4] text-neutral-400 tracking-tighter md:max-w-6xl lg:max-w-3xl mb-8">
+        <p className=" font-walsham text-xl  lg:text-[20.8px] md:text-[20px] leading-[1.4] text-neutral-400 tracking-tight md:max-w-6xl lg:max-w-3xl xl:max-w-[800px] mb-8">
           Hire AI employees today - get your first 24/7 digital team that runs
           your socials, inbox, website, content, customer support, and business
           and sales operations without adding extra headcount.
