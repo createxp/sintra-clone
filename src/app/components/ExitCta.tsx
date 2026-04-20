@@ -6,7 +6,7 @@ const ExitCta = () => {
     <div className="relative bg-black  w-full flex items-center overflow-hidden">
       <div className="home-cta_background" />
 
-      <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-center justify-between w-full max-w-[90rem] mx-auto px-6 md:px-10 lg:px-16  lg:py-0 gap-10 lg:gap-0">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-center justify-between w-full max-w-[90rem] mx-auto px-6 md:px-10 lg:px-16  lg:py-16 xl:py-0 gap-10 lg:gap-0">
         <div className="flex flex-col items-center lg:items-start justify-center gap-8 lg:max-w-[50%]">
           <h1 className="text-white text-[36px] text-center lg:text-left lg:text-[64px] font-walsham tracking-tight md:text-[56px] max-w-3xl leading-[1.05]">
             Your new AI digital workers team with infinite knowledge.

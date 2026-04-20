@@ -11,7 +11,7 @@ const Automations = () => {
         height={1000}
         className="w-full h-full md:object-cover mask-b-from-75%"
       />
-      <div className="flex flex-row items-center w-full justify-center gap-2 absolute xl:-bottom-415 md:-top-56 md:text-center lg:-bottom-300 md:bottom-24 bottom-16 z-14 -top-60">
+      <div className="flex flex-row items-center w-full justify-center gap-2 absolute xl:-bottom-415 md:-bottom-250 md:text-center lg:-bottom-300 top-80 z-14 ">
         <div className="flex flex-col items-center justify-center gap-8">
           <h1 className="text-white text-[36px] text-center lg:text-[64px] font-walsham tracking-tight md:text-[56px] max-w-3xl leading-[1.05]">
             Employ AI staff to automate work. Even while you sleep.
