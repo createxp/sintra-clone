@@ -96,11 +96,13 @@ function Carousel({
   React.useEffect(() => {
     if (!api) return;
     onSelect(api);
+    const raf = requestAnimationFrame(() => onSelect(api));
     api.on("reInit", onSelect);
     api.on("select", onSelect);
-
     return () => {
-      api?.off("select", onSelect);
+      cancelAnimationFrame(raf);
+      api.off("reInit", onSelect);
+      api.off("select", onSelect);
     };
   }, [api, onSelect]);
 
@@ -177,11 +179,12 @@ function CarouselPrevious({
   size = "icon-sm",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const { orientation, scrollPrev, canScrollPrev, opts } = useCarousel();
 
   return (
     <Button
       data-slot="carousel-previous"
+      type="button"
       variant={variant}
       size={size}
       className={cn(
@@ -191,7 +194,7 @@ function CarouselPrevious({
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className,
       )}
-      disabled={!canScrollPrev}
+      disabled={!opts?.loop && !canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
@@ -207,11 +210,12 @@ function CarouselNext({
   size = "icon-sm",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { orientation, scrollNext, canScrollNext, opts } = useCarousel();
 
   return (
     <Button
       data-slot="carousel-next"
+      type="button"
       variant={variant}
       size={size}
       className={cn(
@@ -221,7 +225,7 @@ function CarouselNext({
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className,
       )}
-      disabled={!canScrollNext}
+      disabled={!opts?.loop && !canScrollNext}
       onClick={scrollNext}
       {...props}
     >

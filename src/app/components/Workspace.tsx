@@ -16,7 +16,7 @@ const Workspace = () => {
       <div className="absolute inset-0 z-[2] bg-gradient-to-b from-transparent to-black" />
 
       <div className="relative z-10 flex flex-col justify-end h-full px-[20px] md:px-[40px] lg:px-[120px] pb-8 md:pb-12 lg:pb-24 xl:pt-[490px] pt-[400px] md:pt-[600px] lg:pt-0">
-        <h1 className="text-white font-walsham text-[40px] md:text-[56px] lg:text-[48px] xl:text-[64px] tracking-tight leading-[1.1] max-w-2xl xl:max-w-lg mb-8 md:mb-10 lg:mb-12">
+        <h1 className="text-white font-walsham text-[40px] md:text-[56px] lg:text-[48px] xl:text-[64px] tracking-tight leading-[1.1] max-w-2xl xl:max-w-lg mb-8 md:mb-10 lg:mb-12 lg:pt-[650px] xl:pt-0">
           Multiple workspaces. One team with different AI agents as employees.
         </h1>
 
