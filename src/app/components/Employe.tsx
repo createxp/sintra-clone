@@ -154,6 +154,14 @@ const Employe = () => {
           <CarouselNext className="right-4 md:right-40 absolute z-20 size-12 bg-neutral-600 text-white border border-white/20 backdrop-blur-sm hover:text-white cursor-pointer" />
         </Carousel>
       </div>
+      <div className="flex justify-center mt-12">
+        <button
+          className="px-4 py-3 rounded-full bg-primary text-white cursor-pointer text-lg transition-colors duration-200 font-walsham"
+          // You can add onClick functionality here if needed
+        >
+          Get helpers
+        </button>
+      </div>
     </div>
   );
 };

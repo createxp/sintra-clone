@@ -155,3 +155,60 @@
     @apply font-sans;
   }
 }
+
+/* Exit CTA section */
+.home-cta_background {
+  z-index: 1;
+  background-image: linear-gradient(#3b82f600, #3b82f64d);
+  position: absolute;
+  inset: 0%;
+}
+
+.home-cta_visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.home-cta_visual-image {
+  object-fit: contain;
+  object-position: 0% 100%;
+  width: 90vw;
+  max-width: none;
+  height: 90vw;
+  max-height: none;
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .home-cta_visual {
+    align-self: flex-end;
+    max-height: none;
+  }
+
+  .home-cta_visual-image {
+    width: 40vw;
+    max-width: 40.0521rem;
+    height: auto;
+    max-height: 38.4896rem;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .home-cta_visual {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .home-cta_visual-image {
+    width: 90vw;
+    max-width: none;
+    height: 75vw;
+    max-height: none;
+    margin-top: 0;
+    margin-right: -10vw;
+    display: block;
+  }
+}
