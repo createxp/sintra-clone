@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="flex w-full items-center justify-between lg:hidden">
           <button
             type="button"
-            className="flex h-11 w-11 items-center justify-center text-white hover:opacity-80"
+            className="flex h-11 w-11 items-center justify-center text-white  hover:opacity-80"
             aria-label="Open menu"
           >
             <HamburgerIcon />

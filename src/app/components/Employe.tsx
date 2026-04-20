@@ -10,7 +10,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const employeeData = [
+type Employee = {
+  id: number;
+  video: string;
+  heading: string;
+  subheading: string;
+  href?: string;
+};
+
+const employeeData: Employee[] = [
   {
     id: 1,
     video:
@@ -101,6 +109,7 @@ const employeeData = [
   },
   {
     id: 12,
+    href: "/agents/soshie",
     video:
       "https://cdn.prod.website-files.com/673ead940412138dd4bf8e83%2F67460cfe78dd86c42545bad8_soshie_idle_short_blink_1-transcode.mp4",
     heading: "Soshie",
@@ -125,7 +134,7 @@ const Employe = () => {
       </div>
 
       {/* Carousel */}
-      <div className="relative w-full mask-l-from-75% mask-r-from-75%">
+      <div className="relative w-full lg:mask-l-from-75% lg:mask-r-from-75%">
         {/* Left/Right gradient masks */}
         <div className="absolute left-0 top-0 bottom-0 w-16 md:w-28 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-28 bg-linear-to-r from-transparent to-black z-10 pointer-events-none" />
@@ -144,6 +153,7 @@ const Employe = () => {
                   video={employee.video}
                   heading={employee.heading}
                   subheading={employee.subheading}
+                  href={employee.href}
                 />
               </CarouselItem>
             ))}
