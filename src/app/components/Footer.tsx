@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -8,9 +9,12 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="flex flex-col gap-6">
               <div>
-                <h3 className="text-primary text-[28px] font-bold font-walsham">
-                  sintra
-                </h3>
+                <Image
+                  src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/6628e2d9b36b0b9ab9ae8974_logo-gradient.svg"
+                  alt="sintra"
+                  width={100}
+                  height={100}
+                />
               </div>
 
               <div className="flex flex-col gap-2">
@@ -27,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="">
             <h3 className="text-neutral-900 text-[17px] font-semibold font-walsham mb-4">
               Features
             </h3>
