@@ -38,8 +38,8 @@ const Integrations = () => {
   ];
 
   return (
-    <div className="bg-black w-full min-h-screen lg:px-[76px] pb-16 pt-16">
-      <div className="flex lg:flex-row flex-col md:flex-col gap-8 lg:gap-12 px-[20px] md:px-[40px] lg:px-[44px]">
+    <div className="bg-black w-full min-h-screen xl:px-[76px] pb-16 pt-16">
+      <div className="flex lg:flex-row flex-col md:flex-col gap-8 lg:gap-12 px-[20px] md:px-[40px] lg:px-[54px] xl:px-[44px]">
         <div className="flex flex-col justify-center gap-6 lg:gap-8 flex-1 order-1 lg:order-1">
           <h1 className="text-white font-walsham text-[40px] md:text-[56px] lg:text-[48px] xl:text-[64px] tracking-tight leading-[1.1] md:text-center lg:text-left">
             Integrates with your favorite tools.
@@ -54,7 +54,7 @@ const Integrations = () => {
             disruption. Just smarter execution across your tools.
           </p>
 
-          <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-4 md:gap-4 lg:gap-8 max-w-[200px] md:max-w-full lg:max-w-[320px] mx-auto md:mt-10 md:mx-auto lg:mx-0">
+          <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-4 md:gap-4 lg:gap-[44px] xl:gap-8 max-w-[200px] md:max-w-full lg:max-w-[320px] mx-auto md:mt-10 md:mx-auto lg:mx-0">
             {socialIcons.map((icon, index) => (
               <div
                 key={index}
