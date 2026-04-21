@@ -6,7 +6,7 @@ const Works = () => {
     <div className="bg-black w-full min-h-screen flex flex-col pb-16">
       <div className="flex lg:flex-row flex-col  md:flex-col mt-48">
         {/* Image */}
-        <div className="flex justify-center items-center w-[383px] h-[383px] md:w-[530px] md:h-[530px] lg:w-[760px] lg:h-[746px]">
+        <div className="flex justify-center items-center w-[383px] h-[383px] md:w-[530px] md:h-[530px] lg:w-[504px] lg:h-[730px] xl:w-[760px] xl:h-[746px]">
           <Image
             src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/672384f30ff5f820be7412d1_present-mockup.avif"
             alt="Works"
