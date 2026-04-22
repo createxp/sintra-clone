@@ -50,23 +50,31 @@ const NavbarLight = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-5 md:px-10 lg:px-10 xl:px-[120px]">
       <div className="flex h-[72px] w-full items-center justify-between">
-        {/* sm / md: menu left, logo right */}
+        {/* sm / md: menu left, logo center/left, button right */}
         <div className="flex w-full items-center justify-between lg:hidden">
-          <button
-            type="button"
-            className="flex h-11 w-11 items-center justify-center text-gray-900 hover:opacity-80"
-            aria-label="Open menu"
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              className="flex items-center justify-center text-gray-900 hover:opacity-80"
+              aria-label="Open menu"
+            >
+              <HamburgerIcon />
+            </button>
+            <a href="/" className="shrink-0">
+              <Image
+                src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/66253c9440f55447fcfdc8d7_logo.webp"
+                alt="Sintra"
+                width={90}
+                height={28}
+                priority
+              />
+            </a>
+          </div>
+          <a
+            href="#"
+            className="bg-[#3371E4] text-white font-walsham font-medium text-[15px] rounded-full px-5 py-2 hover:opacity-90 transition-opacity"
           >
-            <HamburgerIcon />
-          </button>
-          <a href="/" className="shrink-0">
-            <Image
-              src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/66253c9440f55447fcfdc8d7_logo.webp"
-              alt="Sintra"
-              width={90}
-              height={28}
-              priority
-            />
+            Buy now
           </a>
         </div>
 

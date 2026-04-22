@@ -96,11 +96,10 @@ const Business = () => {
               return (
                 <div
                   key={card.number}
-                  className={`w-full lg:max-w-none lg:w-1/3 xl:w-[400px] mx-auto lg:mx-0 xl:px-10 flex lg:flex-col items-start gap-6 lg:gap-0 ${
-                    isEven
+                  className={`w-full lg:max-w-none lg:w-1/3 xl:w-[400px] mx-auto lg:mx-0 xl:px-10 flex lg:flex-col items-start gap-6 lg:gap-0 ${isEven
                       ? "flex-row lg:flex-col"
                       : "flex-row-reverse lg:flex-col"
-                  }`}
+                    }`}
                 >
                   <div className="flex-1 min-w-0">
                     <h2 className="hidden md:block text-white text-[22px] md:text-[26px] xl:text-[30px] font-walsham font-semibold leading-tight">

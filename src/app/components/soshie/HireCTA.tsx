@@ -100,7 +100,7 @@ const HireCTA = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="mx-auto lg:px-[44px] bg-white rounded-3xl overflow-hidden">
+        <div className="mx-auto  bg-white rounded-3xl overflow-hidden">
           <div className="flex flex-col md:flex-row items-center">
             {/* Left: Shield badge */}
             <div className="flex items-center justify-center bg-[#EBF0FF] w-full md:w-[40%] lg:w-[38%] py-14 md:py-0 md:self-stretch">
@@ -116,7 +116,7 @@ const HireCTA = () => {
             </div>
 
             {/* Right: text content */}
-            <div className="flex-1 px-8 py-10 md:px-12 md:py-14 lg:px-[44px] lg:py-16">
+            <div className="flex-1 px-8 py-10 md:px-12 md:py-14 lg:px-[80px] lg:py-[80px]">
               <h3 className="font-walsham text-black text-[24px] md:text-[28px] lg:text-[48px] leading-[1.15] tracking-tight mb-4 md:mb-5">
                 Try now - risk-free for 14 days
               </h3>

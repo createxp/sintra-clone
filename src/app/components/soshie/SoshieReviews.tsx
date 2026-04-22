@@ -76,8 +76,8 @@ const SoshieReviews = () => {
             <img
               src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/69106f165e4ecda9ee8415ba_annotation-heart.svg"
               alt="Check"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               className="object-contain"
               sizes="24px"
             />
@@ -100,9 +100,8 @@ const SoshieReviews = () => {
           {reviews.map((review, index) => (
             <div
               key={review.id}
-              className={`bg-white rounded-2xl p-5 flex flex-col gap-3 border border-neutral-200 w-full ${
-                index >= 2 ? "hidden lg:flex" : ""
-              }`}
+              className={`bg-white rounded-2xl p-5 flex flex-col gap-3 border border-neutral-200 w-full ${index >= 2 ? "hidden lg:flex" : ""
+                }`}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1 min-w-0">

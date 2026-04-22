@@ -103,6 +103,16 @@ const DiscoverMore = () => {
 
         <motion.div
           className="flex flex-wrap gap-3 mb-8"
+          style={
+            !showAll
+              ? {
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, black 60%, transparent 100%)",
+                maskImage:
+                  "linear-gradient(to bottom, black 60%, transparent 100%)",
+              }
+              : {}
+          }
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

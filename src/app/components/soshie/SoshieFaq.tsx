@@ -62,14 +62,14 @@ const SoshieFaq = () => {
             Our Social Media AI. Your FAQs
           </h2>
 
-          <p className="font-walsham text-[13px] md:text-[14px] lg:text-[17px] xl:text-[17px] text-neutral-500 leading-normal mb-6 max-w-sm">
+          <p className="font-walsham text-[13px] md:text-[14px] lg:text-[17px] xl:text-[17px] text-neutral-500 leading-normal mb-6 max-w-lg">
             Pricing for all helpers starts at $97/m with Sintra X. You can save
             extra with annual billing.
           </p>
 
           <a
             href="https://www.sintra.ai/pricing"
-            className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-walsham font-medium text-[14px] md:text-[15px] rounded-full px-6 py-3 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-[#1d4ed8] text-white font-walsham font-medium text-[14px] md:text-[17px] rounded-full px-12 py-4 transition-all duration-300 hover:-translate-y-1"
           >
             Try Soshie risk-free
             <ArrowRight className="w-4 h-4" />

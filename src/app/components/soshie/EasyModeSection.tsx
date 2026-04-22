@@ -22,30 +22,29 @@ const EasyModeSection = () => {
     <section className="relative w-full py-18 md:py-32 px-6 md:px-[76px] overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         {/* Heading with Toggle */}
-        <div className="flex flex-col items-center justify-center gap-2 md:gap-3 mb-12 md:mb-16">
-          <h2 className="font-walsham text-white text-center text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] tracking-tight">
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-3 mb-12 md:mb-16 text-center">
+          <h2 className="font-walsham text-white text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] tracking-tight">
             Your social media,
           </h2>
 
-          {/* Toggle row */}
-          <div className="flex items-center gap-2 md:gap-3 lg:gap-4">
-            <span className="font-walsham text-white text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1]">
-              on
-            </span>
+          <span className="font-walsham text-white text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1]">
+            on
+          </span>
 
+          <div className="py-2 md:py-3">
             <button
               onClick={() => setIsActive(!isActive)}
-              className="relative flex items-center justify-start w-[60px] h-[32px] md:w-[90px] md:h-[48px] lg:w-[105px] lg:h-[56px] xl:w-[120px] xl:h-[64px] rounded-full transition-colors duration-300 ease-in-out shadow-[inset_0_0.571px_3.429px_#00000040,inset_0_3.429px_6.857px_#00000040]"
+              className="relative flex items-center justify-start w-[38px] h-[20px] md:w-[90px] md:h-[48px] lg:w-[105px] lg:h-[56px] xl:w-[120px] xl:h-[64px] rounded-full transition-colors duration-300 ease-in-out shadow-[inset_0_0.571px_3.429px_#00000040,inset_0_3.429px_6.857px_#00000040]"
               style={{
                 backgroundColor: isActive ? "#00ff00" : "#ffffff",
               }}
               aria-label="Toggle easy mode"
             >
               <motion.div
-                className="absolute w-[26px] h-[26px] md:w-[40px] md:h-[40px] lg:w-[48px] lg:h-[48px] xl:w-[64px] xl:h-[64px] rounded-full"
+                className="absolute w-[16px] h-[16px] md:w-[40px] md:h-[40px] lg:w-[48px] lg:h-[48px] xl:w-[64px] xl:h-[64px] rounded-full [--x-inactive:-6px] [--x-active:25px] md:[--x-inactive:-15px] md:[--x-active:65px] lg:[--x-inactive:-18px] lg:[--x-active:70px] xl:[--x-inactive:-26px] xl:[--x-active:80px]"
                 initial={false}
                 animate={{
-                  x: isActive ? "calc(100% + 6px)" : "-12px",
+                  x: isActive ? "var(--x-active)" : "var(--x-inactive)",
                 }}
                 transition={{
                   duration: 0.6,
@@ -62,16 +61,16 @@ const EasyModeSection = () => {
                 </div>
               </motion.div>
             </button>
-
-            <span
-              className="font-walsham text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] transition-colors duration-300"
-              style={{
-                color: isActive ? "#00ff00" : "#ffffff",
-              }}
-            >
-              easy mode.
-            </span>
           </div>
+
+          <span
+            className="font-walsham text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] transition-colors duration-300"
+            style={{
+              color: isActive ? "#00ff00" : "#ffffff",
+            }}
+          >
+            easy mode.
+          </span>
         </div>
 
         {/* Images Section */}
