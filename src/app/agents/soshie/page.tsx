@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+import NavbarLight from "@/app/components/NavbarLight";
 import Features from "@/app/components/soshie/Features";
 import Info from "@/app/components/soshie/Info";
 import Setup from "@/app/components/soshie/Setup";
@@ -19,7 +19,7 @@ const SOSHIE_HERO =
 export default function SoshieAgentPage() {
   return (
     <div className="flex min-h-screen flex-col bg-neutral-50">
-      <Navbar />
+      <NavbarLight />
       <main className="w-full flex-1 px-2 mt-8 py-8 md:px-2 md:py-12 lg:px-10 xl:px-[120px] ">
         <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-3xl">
           <div
