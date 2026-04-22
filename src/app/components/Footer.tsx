@@ -216,7 +216,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 lg:mt-40">
+        <div className="mt-8 md:mt-12 lg:mt-16">
           <svg
             role="img"
             viewBox="0 0 126 31"

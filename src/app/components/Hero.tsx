@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-2 w-full h-full bg-[linear-gradient(#000_2%,#0000_21%),linear-gradient(#0000_64%,#000_98%),linear-gradient(225deg,#0000_33%,#000c_65%,#000_82%)]" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mt-16 lg:mt-30 xl:mt-6 md:mt-30">
+      <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mt-16 lg:mt-30 xl:mt-12 md:mt-30">
         <h1
           className="text-white font-walsham font-medium text-[40px] md:text-[64px] mb-4 leading-[1.06]"
           style={{ letterSpacing: "-0.03em" }}

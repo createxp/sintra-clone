@@ -35,9 +35,9 @@ const EasyModeSection = () => {
 
             <button
               onClick={() => setIsActive(!isActive)}
-              className="relative flex items-center justify-start w-[60px] h-[32px] md:w-[90px] md:h-[48px] lg:w-[105px] lg:h-[56px] xl:w-[120px] xl:h-[64px] rounded-full transition-colors duration-300 ease-in-out"
+              className="relative flex items-center justify-start w-[60px] h-[32px] md:w-[90px] md:h-[48px] lg:w-[105px] lg:h-[56px] xl:w-[120px] xl:h-[64px] rounded-full transition-colors duration-300 ease-in-out shadow-[inset_0_0.571px_3.429px_#00000040,inset_0_3.429px_6.857px_#00000040]"
               style={{
-                backgroundColor: isActive ? "#03ff00" : "#6b7280",
+                backgroundColor: isActive ? "#00ff00" : "#ffffff",
               }}
               aria-label="Toggle easy mode"
             >
@@ -45,11 +45,11 @@ const EasyModeSection = () => {
                 className="absolute w-[26px] h-[26px] md:w-[40px] md:h-[40px] lg:w-[48px] lg:h-[48px] xl:w-[64px] xl:h-[64px] rounded-full"
                 initial={false}
                 animate={{
-                  x: isActive ? "calc(100% + 6px)" : "3px",
+                  x: isActive ? "calc(100% + 6px)" : "-12px",
                 }}
                 transition={{
-                  duration: 0.4,
-                  ease: "easeIn",
+                  duration: 0.6,
+                  ease: "easeInOut",
                 }}
               >
                 <div className="relative w-full h-full">
@@ -66,7 +66,7 @@ const EasyModeSection = () => {
             <span
               className="font-walsham text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] transition-colors duration-300"
               style={{
-                color: isActive ? "#03ff00" : "#9ca3af",
+                color: isActive ? "#00ff00" : "#ffffff",
               }}
             >
               easy mode.

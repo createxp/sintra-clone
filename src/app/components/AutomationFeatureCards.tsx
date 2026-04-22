@@ -45,13 +45,13 @@ const purpleCellClass =
 
 /** Blue & orange cards — design dimensions per breakpoint */
 const bottomCardDimensions =
-  "mx-auto box-border h-[522px] w-full max-w-[347px] md:h-[687px] md:max-w-[311px] lg:h-[763px] lg:max-w-[430px] lg:w-[430px] xl:h-[738px] xl:max-w-[488px] xl:w-[488px] justify-self-center";
+  "mx-auto box-border h-[522px] w-full max-w-[347px] md:h-[687px] md:max-w-[311px] lg:h-[763px] lg:max-w-[430px] lg:w-[430px] xl:h-[738px] xl:max-w-none xl:w-full justify-self-center";
 
 export function AutomationFeatureCards() {
   const [purple, blue, orange] = automationFeatureCards;
 
   return (
-    <div className="grid w-full grid-cols-1 gap-8 lg:pt-72 xl:pt-30 lg:gap-14 font-walsham md:grid-cols-2 px-8 bg-black md:px-14 lg:px-14 2xl:px-[250px] md:pt-64 pt-72">
+    <div className="grid w-full grid-cols-1 gap-8 lg:pt-72 xl:pt-30 lg:gap-14 xl:gap-12 font-walsham md:grid-cols-2 px-8 bg-black md:px-14 lg:px-14 2xl:px-[250px] md:pt-64 pt-72">
       {/* Purple — full width row; inner text | image from md+ */}
       <article
         className="overflow-hidden rounded-[28px] border border-[#ffffff1a] px-[28px] pt-[48px] md:col-span-2"

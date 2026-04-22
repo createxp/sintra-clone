@@ -69,7 +69,7 @@ const TRUSTPILOT_STARS =
 
 const SoshieReviews = () => {
   return (
-    <div className="bg-[#fafafa] w-full py-16 md:py-20 lg:py-24 px-[20px] md:px-[40px] lg:px-[120px]">
+    <div className="bg-white w-full py-16 md:py-20 lg:py-24 px-[20px] md:px-[40px] lg:px-[120px]">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <div className="flex justify-center mb-4">
@@ -106,7 +106,7 @@ const SoshieReviews = () => {
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-black font-walsham text-[16px] lg:text-[15px] font-medium leading-[1.3] mb-2">
+                  <h3 className="text-black font-walsham text-[17px] lg:text-[17px] font-medium leading-[1.3] mb-2">
                     {review.name}
                   </h3>
                   <Image
@@ -126,11 +126,11 @@ const SoshieReviews = () => {
                 </div>
               </div>
 
-              <p className="text-black/70 font-walsham text-[15px] lg:text-[13px] leading-normal flex-1">
+              <p className="text-black/70 font-walsham text-[17px] lg:text-[17px] leading-normal flex-1">
                 {review.content}
               </p>
 
-              <p className="text-gray-400 font-walsham text-[13px] lg:text-[12px] mt-auto">
+              <p className="text-gray-400 font-walsham text-[14px] lg:text-[14px] mt-auto">
                 {review.date} • {review.location}
               </p>
             </div>
@@ -138,7 +138,7 @@ const SoshieReviews = () => {
         </div>
 
         {/* Mobile badge */}
-        <div className="md:hidden flex flex-col items-center bg-white/80 rounded-4xl px-6 py-2 -mt-8 mx-auto max-w-[320px] relative z-10">
+        <div className="md:hidden flex flex-col items-center bg-neutral-100 rounded-4xl px-6 py-2 -mt-8 mx-auto max-w-[420px] relative z-10">
           <div className="flex -space-x-2">
             {[1, 2, 3].map((i) => (
               <div
@@ -173,7 +173,7 @@ const SoshieReviews = () => {
         </div>
 
         {/* Tablet & Desktop badge */}
-        <div className="hidden md:flex items-center justify-center gap-4 md:-mt-10 mt-12 lg:-mt-8 xl:-mt-10 relative z-10 bg-white w-fit mx-auto rounded-full px-4 py-2 border border-neutral-200">
+        <div className="hidden md:flex items-center justify-center gap-4 md:-mt-10 mt-12 lg:-mt-8 xl:-mt-10 relative z-10 bg-neutral-100 w-fit mx-auto rounded-full px-2 py-0.5 border border-neutral-200">
           <div className="flex -space-x-2">
             {[1, 2, 3].map((i) => (
               <div
@@ -183,10 +183,10 @@ const SoshieReviews = () => {
             ))}
           </div>
           <div className="flex items-center gap-2 text-black font-walsham">
-            <span className="text-lg font-medium">50,000+</span>
+            <span className="text-lg font-walsham">50,000+</span>
             <span>founders use Sintra</span>
           </div>
-          <button className="ml-4 px-4 py-2 text-black font-walsham text-sm hover:bg-black/5 transition-colors flex items-center gap-2 rounded-full border border-neutral-200">
+          <button className="ml-4 px-4 py-2 text-black font-walsham text-lg transition-colors flex items-center gap-2 rounded-full ">
             View more
             <svg
               className="w-4 h-4"

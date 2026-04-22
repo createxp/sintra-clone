@@ -4,7 +4,7 @@ import React from "react";
 const Works = () => {
   return (
     <div className="bg-black w-full min-h-screen flex flex-col pb-16">
-      <div className="flex lg:flex-row flex-col  md:flex-col mt-48">
+      <div className="flex lg:flex-row flex-col md:flex-col mt-48">
         {/* Image */}
         <div className="flex justify-center items-center w-[383px] h-[383px] md:w-[530px] md:h-[530px] lg:w-[504px] lg:h-[730px] xl:w-[760px] xl:h-[746px]">
           <Image
@@ -17,11 +17,11 @@ const Works = () => {
         </div>
 
         {/* Text */}
-        <div className="flex flex-col px-8 md:px-0 justify-center md:mx-auto items-center gap-12 text-white max-w-xl lg:py-[186px] w-full">
-          <h1 className="lg:text-[64px] md:text-[56px] text-[36px] font-walsham tracking-tight leading-[1.1] max-w-4xl lg:px-[76px]">
+        <div className="flex flex-col px-8 md:px-0  justify-center md:mx-auto lg:mx-0  items-center gap-12 text-white max-w-xl lg:py-[186px] w-full xl:px-[76px] xl:py-[190px]">
+          <h1 className="lg:text-[64px] md:text-[56px] text-[36px] font-walsham tracking-tight leading-[1.1] max-w-4xl">
             Work globally with no extra effort.
           </h1>
-          <p className="md:text-[20px] text-[19px] font-walsham font-normal leading-[1.3] tracking-tight w-full md:pb-10 lg:px-[76px]">
+          <p className="md:text-[20px] text-[19px] font-walsham font-normal leading-[1.3] tracking-tight w-full md:pb-10 xl:max-w-2xl">
             <span className="font-bold"> Speaks in 100+ languages.</span>{" "}
             Sintra’s digital AI employees are built to work across different
             markets - write social media content in Italian, answer German

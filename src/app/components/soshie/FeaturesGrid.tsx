@@ -92,7 +92,7 @@ const features = [
 const FeaturesGrid = () => {
   return (
     <>
-      <section className="relative w-full px-5 md:px-8 lg:px-12 xl:px-[44px]">
+      <section className="relative w-full px-5 md:px-8 lg:px-12 xl:px-[76px]">
         <div className="mx-auto">
           {/* Inner container with responsive padding */}
           <div className="px-0 py-12 md:px-12 md:py-16 lg:px-24 lg:py-20 xl:px-[214px] xl:py-[95px]">
@@ -105,16 +105,14 @@ const FeaturesGrid = () => {
                     {feature.icon}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="font-walsham text-[18px] md:text-[19px] lg:text-[20px] leading-[1.3] text-black mb-2 md:mb-3">
-                    <strong>{feature.title.split(".")[0]}.</strong>
+                  {/* Title and Description */}
+                  <p className="font-walsham text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-tight">
+                    <strong className="text-black">
+                      {feature.title.split(".")[0]}.
+                    </strong>
                     {feature.title.includes(" ") &&
-                      " " + feature.title.split(".")[1]}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-walsham text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-normal text-gray-400">
-                    {feature.description}
+                      " " + feature.title.split(".")[1]}{" "}
+                    <span className="text-gray-400">{feature.description}</span>
                   </p>
                 </motion.div>
               ))}

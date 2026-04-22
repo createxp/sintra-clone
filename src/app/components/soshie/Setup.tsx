@@ -132,7 +132,7 @@ const Setup = () => {
   }, [handleScroll]);
 
   return (
-    <div className="bg-white w-full">
+    <div className="bg-[#fafafa] w-full">
       {/* Header */}
       <div className="flex flex-col items-center justify-center gap-3 mb-12 md:mb-16 px-[20px] md:px-[76px] pt-16 md:pt-20 xl:pt-[128px]">
         <h1 className="text-black font-walsham text-[30px] md:text-[44px] lg:text-[48px] xl:text-[48px] tracking-tight leading-[1.1] text-center max-w-2xl">

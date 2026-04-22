@@ -77,7 +77,7 @@ const links = [
 
 const DiscoverMore = () => {
   const [showAll, setShowAll] = useState(false);
-  
+
   const getVisibleLinks = () => {
     if (showAll) return links;
     if (typeof window !== "undefined" && window.innerWidth < 768) {
@@ -85,7 +85,7 @@ const DiscoverMore = () => {
     }
     return links.slice(0, 12);
   };
-  
+
   const visibleLinks = getVisibleLinks();
 
   return (
@@ -112,7 +112,7 @@ const DiscoverMore = () => {
             <motion.a
               key={link.href}
               href={link.href}
-              className="inline-flex items-center gap-2 bg-neutral-200 rounded-full px-6 py-4 font-walsham text-[13px] md:text-[14px] font-medium text-black transition-colors capitalize"
+              className="inline-flex items-center gap-2 bg-neutral-200 rounded-full px-6 py-4 font-walsham text-[13px] md:text-[17px] font-medium text-black transition-colors capitalize"
             >
               {link.text}
               <ArrowRight className="size-3.5 shrink-0" />
@@ -122,7 +122,7 @@ const DiscoverMore = () => {
 
         <button
           onClick={() => setShowAll(!showAll)}
-          className="font-walsham text-[14px] md:text-[17px] font-medium text-black cursor-pointer  transition-colors "
+          className="font-walsham text-[14px] md:text-[20px]  text-black cursor-pointer  transition-colors "
         >
           {showAll ? "View less" : "View more"}
         </button>
