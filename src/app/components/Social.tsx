@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const brainCards = [
   {
@@ -48,13 +51,43 @@ const cardPositionClasses: Record<string, string> = {
 };
 
 const Social = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  // 3-phase animation tied to the full section scrolling through viewport:
+  // Phase 1 (0.0–0.3): invisible, card is far above
+  // Phase 2 (0.3–0.5): card slides in with low opacity, becoming visible
+  // Phase 3 (0.5–0.7): card settles behind brain at full opacity, scaled down
+  const cardY = useTransform(
+    scrollYProgress,
+    [0.0, 0.16, 0.3, 0.43, 0.5, 0.6, 0.7],
+    [-1300, -1250, -900, -350, -150, -50, 0],
+  );
+  const cardScale = useTransform(
+    scrollYProgress,
+    [0.0, 0.16, 0.3, 0.43, 0.5, 0.6, 0.7],
+    [1.3, 1.4, 1.2, 1.0, 0.9, 0.75, 0.65],
+  );
+  const cardOpacity = useTransform(
+    scrollYProgress,
+    [0.0, 0.16, 0.3, 0.38, 0.45, 0.53, 0.65],
+    [0, 0, 0.35, 0.45, 0.5, 0.75, 1],
+  );
+
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
-      <div className="flex flex-col items-center justify-center pt-60  md:pt-72 lg:pt-96 xl:pt-96 xl:pb-[192px] px-4">
-        <h1 className="text-white text-[30px] md:text-[30px] lg:text-[30px] xl:text-[30px] tracking-tight leading-[1.1] mb-4 text-center lg:pt-48 xl:max-w-lg font-walsham">
+    <div
+      ref={sectionRef}
+      className="relative w-full min-h-screen overflow-hidden"
+    >
+      <div className="flex flex-col items-center justify-center pt-60 md:pt-72 lg:pt-96 xl:pt-96 xl:pb-[192px] px-4">
+        <h1 className="relative z-10 text-white text-[30px] md:text-[30px] lg:text-[30px] xl:text-[30px] tracking-tight leading-[1.1] mb-4 text-center lg:pt-48 xl:max-w-lg font-walsham">
           Shaped by real social performance. Trained on 1M+ posts.
         </h1>
-        <p className="text-white text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] tracking-tight font-walsham max-w-2xl text-center leading-[1.4] mb-12 md:mb-16 lg:mb-0">
+        <p className="relative z-10 text-white text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] tracking-tight font-walsham max-w-2xl text-center leading-[1.4] mb-12 md:mb-16 lg:mb-0">
           Trained on millions of real social posts, Soshie understands what
           practical intelligence - helping your brand post smarter and move
           faster. It&apos;s balanced, credible, and fits seamlessly into any
@@ -68,23 +101,32 @@ const Social = () => {
         </h1>
 
         <div className="relative mx-auto w-full max-w-[60rem] lg:h-[29.888rem]">
-          {/* Card photo pack behind the brain */}
-          <Image
-            src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/6980606a9e70d793c0ec0e63_brain-ai_photo-pack-1.avif"
-            alt="Brain AI photo cards"
-            width={2000}
-            height={2000}
-            className="absolute z-[3] object-cover overflow-visible left-1/2 -translate-x-1/2 w-[18rem] h-[11rem] -top-4 md:w-[35rem] md:h-[20rem] md:-top-8 lg:w-[53rem] lg:h-[29.888rem] lg:-top-24"
-            style={{ maxWidth: "none" }}
-          />
+          {/* Card photo pack — animated on scroll */}
+          <motion.div
+            style={{
+              y: cardY,
+              scale: cardScale,
+              opacity: cardOpacity,
+            }}
+            className="absolute z-[3] left-1/2 -translate-x-1/2 w-[24rem] h-[15rem] -top-16 md:w-[42rem] md:h-[26rem] md:-top-20 lg:w-[53rem] lg:h-[29.888rem] lg:-top-24 will-change-transform"
+          >
+            <Image
+              src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/6980606a9e70d793c0ec0e63_brain-ai_photo-pack-1.avif"
+              alt="Brain AI photo cards"
+              width={2000}
+              height={2000}
+              className="w-full h-full object-contain overflow-visible"
+              style={{ maxWidth: "none" }}
+            />
+          </motion.div>
 
-          {/* Brain image on top */}
+          {/* Brain image — stays centered, always on top */}
           <Image
             src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/691d6303264a7df642c98618_sintra-brain.avif"
             alt="Soshie is powered by Brain AI"
             width={2000}
             height={2000}
-            className="relative lg:absolute z-[4] w-full max-w-[14rem] md:max-w-[22rem] lg:min-w-[29.759rem] lg:max-w-[29.759rem] h-auto object-contain mx-auto lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2"
+            className="relative lg:absolute z-[6] w-full max-w-[14rem] md:max-w-[22rem] lg:min-w-[29.759rem] lg:max-w-[29.759rem] h-auto object-contain mx-auto lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2"
           />
 
           {/* Mobile stacked cards image */}
