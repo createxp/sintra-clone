@@ -99,18 +99,7 @@ const FeaturesGrid = () => {
             {/* Grid with responsive gaps */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-x-16 md:gap-y-16 lg:gap-x-32 lg:gap-y-20 xl:gap-x-[200px] xl:gap-y-[126px]">
               {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="flex flex-col items-start"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.1,
-                    ease: "easeOut",
-                  }}
-                >
+                <motion.div key={index} className="flex flex-col items-start">
                   {/* Icon */}
                   <div className="mb-4 md:mb-5 lg:mb-6 text-black">
                     {feature.icon}
@@ -152,26 +141,14 @@ const FeaturesGrid = () => {
           {/* Text Container */}
           <div className="lg:flex-1 px-0 text-left md:px-8 lg:px-[54px] xl:px-[172px]">
             {/* Heading */}
-            <motion.h2
-              className="font-walsham text-[24px] md:text-[28px] lg:text-[48px] xl:text-[48px] tracking-tight leading-[1.1] text-black mb-8 md:mb-12 xl:mb-[64px] lg:max-w-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+            <motion.h2 className="font-walsham text-[24px] md:text-[28px] lg:text-[48px] xl:text-[48px] tracking-tight leading-[1.1] text-black mb-8 md:mb-12 xl:mb-[64px] lg:max-w-3xl">
               Scale creates experience. Experience creates intelligence.
             </motion.h2>
 
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 md:gap-x-16 md:gap-y-10 lg:grid-cols-[270px_270px] lg:gap-x-[140px] lg:gap-y-[60px] xl:grid-cols-[270px_270px] xl:gap-x-[140px]">
               {/* Stat 1 */}
-              <motion.div
-                className="flex flex-col lg:w-[270px] xl:w-[270px]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              >
+              <motion.div className="flex flex-col lg:w-[270px] xl:w-[270px]">
                 <p className="font-walsham text-[14px] md:text-[15px] lg:text-[20px] xl:text-[20px] text-black mb-2">
                   More than
                 </p>
@@ -184,13 +161,7 @@ const FeaturesGrid = () => {
               </motion.div>
 
               {/* Stat 2 */}
-              <motion.div
-                className="flex flex-col lg:w-[270px] xl:w-[270px]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              >
+              <motion.div className="flex flex-col lg:w-[270px] xl:w-[270px]">
                 <p className="font-walsham text-[14px] md:text-[15px] lg:text-[20px] xl:text-[20px] text-black mb-2">
                   Available
                 </p>
@@ -203,13 +174,7 @@ const FeaturesGrid = () => {
               </motion.div>
 
               {/* Stat 3 */}
-              <motion.div
-                className="flex flex-col lg:w-[270px] xl:w-[270px]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              >
+              <motion.div className="flex flex-col lg:w-[270px] xl:w-[270px]">
                 <p className="font-walsham text-[14px] md:text-[15px] lg:text-[20px] xl:text-[20px] text-black mb-2">
                   More than
                 </p>
@@ -222,13 +187,7 @@ const FeaturesGrid = () => {
               </motion.div>
 
               {/* Stat 4 */}
-              <motion.div
-                className="flex flex-col lg:w-[270px] xl:w-[270px]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-              >
+              <motion.div className="flex flex-col lg:w-[270px] xl:w-[270px]">
                 <p className="font-walsham text-[14px] md:text-[15px] lg:text-[20px] xl:text-[20px] text-black mb-2">
                   More than
                 </p>
@@ -243,13 +202,7 @@ const FeaturesGrid = () => {
           </div>
 
           {/* Image Container - Only visible on lg and xl screens - Absolute positioned */}
-          <motion.div
-            className="hidden lg:block absolute top-10 lg:-right-[80%] xl:-right-[40%] w-[76.688rem] h-[60.5rem]"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <motion.div className="hidden lg:block absolute top-10 lg:-right-[80%] xl:-right-[40%] w-[76.688rem] h-[60.5rem]">
             <Image
               src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/69129c36e9ea8ca6e6c8ce0a_soshie-factors_illustration.avif"
               alt="Soshie character illustration"

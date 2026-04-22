@@ -37,20 +37,19 @@ const EasyModeSection = () => {
               onClick={() => setIsActive(!isActive)}
               className="relative flex items-center justify-start w-[60px] h-[32px] md:w-[90px] md:h-[48px] lg:w-[105px] lg:h-[56px] xl:w-[120px] xl:h-[64px] rounded-full transition-colors duration-300 ease-in-out"
               style={{
-                backgroundColor: isActive ? "#a3ff12" : "#6b7280",
+                backgroundColor: isActive ? "#03ff00" : "#6b7280",
               }}
               aria-label="Toggle easy mode"
             >
               <motion.div
-                className="absolute w-[26px] h-[26px] md:w-[40px] md:h-[40px] lg:w-[48px] lg:h-[48px] xl:w-[56px] xl:h-[56px] rounded-full"
+                className="absolute w-[26px] h-[26px] md:w-[40px] md:h-[40px] lg:w-[48px] lg:h-[48px] xl:w-[64px] xl:h-[64px] rounded-full"
                 initial={false}
                 animate={{
                   x: isActive ? "calc(100% + 6px)" : "3px",
                 }}
                 transition={{
-                  type: "spring",
-                  stiffness: 500,
-                  damping: 30,
+                  duration: 0.4,
+                  ease: "easeIn",
                 }}
               >
                 <div className="relative w-full h-full">
@@ -67,7 +66,7 @@ const EasyModeSection = () => {
             <span
               className="font-walsham text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] transition-colors duration-300"
               style={{
-                color: isActive ? "#a3ff12" : "#9ca3af",
+                color: isActive ? "#03ff00" : "#9ca3af",
               }}
             >
               easy mode.
@@ -85,10 +84,6 @@ const EasyModeSection = () => {
               style={{
                 aspectRatio: "1014 / 601.3",
               }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
@@ -110,10 +105,6 @@ const EasyModeSection = () => {
                   left: "-12%",
                   bottom: "-20%",
                 }}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <Image
                   src={LEFT_IMAGE}
@@ -133,10 +124,6 @@ const EasyModeSection = () => {
                   right: "-40%",
                   bottom: "-22%",
                 }}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <Image
                   src={RIGHT_IMAGE}
@@ -159,10 +146,6 @@ const EasyModeSection = () => {
                 boxShadow:
                   "0 8px 10px -6px #4040400f, 0 20px 25px -5px #4040400f",
               }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <Image
                 src={MOBILE_MAIN_IMAGE}
@@ -182,10 +165,6 @@ const EasyModeSection = () => {
                   left: "-3rem",
                   bottom: "-7rem",
                 }}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <Image
                   src={LEFT_IMAGE}
@@ -206,10 +185,6 @@ const EasyModeSection = () => {
                   right: "-75%",
                   bottom: "-7rem",
                 }}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <Image
                   src={RIGHT_IMAGE}
