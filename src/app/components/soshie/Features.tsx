@@ -100,7 +100,14 @@ const Features = () => {
     <div className="bg-neutral-50 w-full min-h-screen px-4 md:px-10 xl:px-[76px]">
       <div className="flex justify-center flex-col py-16 md:py-20 xl:py-[128px] items-center">
         <h1 className="text-black font-walsham text-[40px] md:text-[56px] lg:text-[48px] xl:text-[48px] tracking-tight leading-[1.1] mb-4 text-center xl:max-w-2xl">
-          First AI social media assistant teams actually want
+          First AI social media assistant{" "}
+          <span className="inline-block">
+            <img
+              className="w-9.5 h-9.5 rounded-full inline-block object-cover"
+              src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/690fb6e3bec5818fa838eec9_navbar_helper-image-soshie.avif"
+            />
+          </span>{" "}
+          teams actually want
         </h1>
         <p className="text-neutral-600 text-[17px] md:text-[19px] xl:text-[19px] px-4 md:px-8 lg:px-0 tracking-tight font-walsham max-w-2xl text-center leading-[1.4] mb-12 md:mb-16">
           Social media tools are easy to buy, but hard to keep up with. Soshie
@@ -141,6 +148,30 @@ const Features = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="w-full px-4 md:px-8 xl:my-64 xl:px-[400px] lg:px-0 mb-12 md:mb-16 flex justify-center items-center">
+          <div
+            className="text-[24px] md:text-[24px] lg:text-[35px] xl:text-[35px] font-walsham font-medium text-left leading-[1.3] tracking-tight pt-14 lg:pt-0"
+            style={{ color: "#9B7FD4" }}
+          >
+            <p className="mb-8">
+              Most teams don't fail at social media - they abandon it.
+            </p>
+            <p className="mb-8">
+              Not because it doesn't work, but because it becomes another thing
+              to manage. Soshie{" "}
+              <span className="inline-block">
+                <img
+                  className="w-9.5 h-9.5 rounded-full inline-block object-cover"
+                  src="https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/690fb6e3bec5818fa838eec9_navbar_helper-image-soshie.avif"
+                  alt="Soshie"
+                />
+              </span>{" "}
+              makes it sustainable by running it quietly in the background.
+            </p>
+            <p>One AI social media agent - no extra headcount required.</p>
+          </div>
         </div>
       </div>
     </div>

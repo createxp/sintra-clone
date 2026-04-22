@@ -178,19 +178,17 @@ const Media = () => {
       <div className="max-w-[1440px] mx-auto">
         {/* Section Heading */}
         <motion.div className="text-center mb-12 md:mb-16 lg:mb-20">
-          <h2 className="font-walsham text-black text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] leading-[1.15] tracking-tight inline-flex items-center justify-center flex-wrap gap-x-3">
-            <Image
-              src={SOSHIE_AVATAR}
-              alt="Soshie"
-              width={48}
-              height={48}
-              className="rounded-full w-[30px] h-[30px] lg:w-[48px] lg:h-[48px] inline-block"
-            />
-            <span>
-              Soshie is the most{" "}
-              <span className="text-red-500">&#10084;&#65039;</span> loved AI
-              agent for social media
-            </span>
+          <h2 className="font-walsham text-black text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] leading-[1.15] tracking-tight lg:max-w-2xl mx-auto">
+            <span className="inline-block">
+              <img
+                src={SOSHIE_AVATAR}
+                alt="Soshie"
+                className="rounded-full w-[30px] h-[30px] lg:w-[48px] lg:h-[48px] inline-block object-cover align-middle"
+              />
+            </span>{" "}
+            Soshie is the most{" "}
+            <span className="text-red-500">&#10084;&#65039;</span> loved AI
+            agent for social media
           </h2>
         </motion.div>
 
