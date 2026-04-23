@@ -138,41 +138,45 @@ const SoshieReviews = () => {
         </div>
 
         {/* Mobile badge */}
-        <div className="md:hidden flex flex-col items-center bg-neutral-100 rounded-4xl px-6 py-2 -mt-8 mx-auto max-w-[420px] relative z-10">
-          <div className="flex -space-x-2">
-            {[
-              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5d3882af649433af33f3_mister-4.avif",
-              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5ccb5c11f13918a3ddb5_mister-3.webp",
-              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5cccafc8dc06f64c24bb_mister-2.webp",
-            ].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Founder ${i + 1}`}
-                width={32}
-                height={32}
-                className="w-8 h-8 rounded-full border-2 border-white object-cover"
-              />
-            ))}
+        <div className="md:hidden flex flex-col items-center bg-neutral-100 rounded-4xl px-4 py-3 -mt-8 mx-auto max-w-[420px] relative z-10">
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-2 pb-2">
+              {[
+                "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5d3882af649433af33f3_mister-4.avif",
+                "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5ccb5c11f13918a3ddb5_mister-3.webp",
+                "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5cccafc8dc06f64c24bb_mister-2.webp",
+              ].map((src, i) => (
+                <Image
+                  key={i}
+                  src={src}
+                  alt={`Founder ${i + 1}`}
+                  width={32}
+                  height={32}
+                  className="w-6 h-6 rounded-full border-2 border-white object-cover"
+                />
+              ))}
+            </div>
+            <p className="text-black font-walsham text-[15px] font-medium">
+              50,000+ founders use Sintra
+            </p>
           </div>
-          <p className="text-black font-walsham text-[15px] font-medium text-center">
-            50,000+ founders use Sintra
-          </p>
-          <div className="w-full border-t border-black/10 pt-4">
-            <button className="w-full flex items-center justify-center gap-2 text-black font-walsham text-sm hover:opacity-80 transition-opacity">
+          <div className="w-full border-t border-black/10 pt-2">
+            <button className="w-full flex items-center justify-center gap-2 text-black font-walsham text-[17px] hover:opacity-80 transition-opacity">
               View more
               <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-[22px] h-[22px]"
                 viewBox="0 0 24 24"
+                fill="none"
+                preserveAspectRatio="xMidYMid meet"
+                aria-hidden="true"
+                role="img"
               >
-                <circle cx="12" cy="12" r="8" strokeWidth="1.5" />
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8v8m4-4H8"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z"
+                  fill="currentColor"
                 />
               </svg>
             </button>
