@@ -100,8 +100,9 @@ const SoshieReviews = () => {
           {reviews.map((review, index) => (
             <div
               key={review.id}
-              className={`bg-white rounded-2xl p-5 flex flex-col gap-3 border border-neutral-200 w-full ${index >= 2 ? "hidden lg:flex" : ""
-                }`}
+              className={`bg-white rounded-2xl p-5 flex flex-col gap-3 border border-neutral-200 w-full ${
+                index >= 2 ? "hidden lg:flex" : ""
+              }`}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1 min-w-0">
@@ -139,10 +140,18 @@ const SoshieReviews = () => {
         {/* Mobile badge */}
         <div className="md:hidden flex flex-col items-center bg-neutral-100 rounded-4xl px-6 py-2 -mt-8 mx-auto max-w-[420px] relative z-10">
           <div className="flex -space-x-2">
-            {[1, 2, 3].map((i) => (
-              <div
+            {[
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5d3882af649433af33f3_mister-4.avif",
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5ccb5c11f13918a3ddb5_mister-3.webp",
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5cccafc8dc06f64c24bb_mister-2.webp",
+            ].map((src, i) => (
+              <img
                 key={i}
-                className="w-8 h-8 rounded-full bg-linear-to-br from-purple-400 to-pink-500 border-2 border-white"
+                src={src}
+                alt={`Founder ${i + 1}`}
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-full border-2 border-white object-cover"
               />
             ))}
           </div>
@@ -152,21 +161,20 @@ const SoshieReviews = () => {
           <div className="w-full border-t border-black/10 pt-4">
             <button className="w-full flex items-center justify-center gap-2 text-black font-walsham text-sm hover:opacity-80 transition-opacity">
               View more
-              <span className="w-5 h-5 rounded-full border border-black/40 flex items-center justify-center">
-                <svg
-                  className="w-3 h-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 4v16m8-8H4"
-                  />
-                </svg>
-              </span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="8" strokeWidth="1.5" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v8m4-4H8"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -174,10 +182,18 @@ const SoshieReviews = () => {
         {/* Tablet & Desktop badge */}
         <div className="hidden md:flex items-center justify-center gap-4 md:-mt-10 mt-12 lg:-mt-8 xl:-mt-10 relative z-10 bg-neutral-100 w-fit mx-auto rounded-full px-2 py-0.5 border border-neutral-200">
           <div className="flex -space-x-2">
-            {[1, 2, 3].map((i) => (
-              <div
+            {[
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5d3882af649433af33f3_mister-4.avif",
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5ccb5c11f13918a3ddb5_mister-3.webp",
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5cccafc8dc06f64c24bb_mister-2.webp",
+            ].map((src, i) => (
+              <Image
                 key={i}
-                className="w-6 h-6 rounded-full bg-linear-to-br from-purple-400 to-pink-500 border-2 border-white"
+                src={src}
+                alt={`Founder ${i + 1}`}
+                width={24}
+                height={24}
+                className="w-6 h-6 rounded-full border-2 border-white object-cover"
               />
             ))}
           </div>

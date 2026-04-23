@@ -176,8 +176,8 @@ const Testimonials = () => {
         <div className="hidden md:flex items-center justify-center gap-4 md:-mt-10 mt-12 lg:-mt-8 xl:-mt-10 relative z-10 bg-neutral-900 w-fit mx-auto rounded-full">
           <div className="flex -space-x-2">
             {[
-              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5bda1824c1500bd2ef2e_c.avif",
-              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5cf828282df9780dc5fd_oz.avif",
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5d3882af649433af33f3_mister-4.avif",
+              "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5ccb5c11f13918a3ddb5_mister-3.webp",
               "https://cdn.prod.website-files.com/661d4f6d81ac1042b721396c/670b5cccafc8dc06f64c24bb_mister-2.webp",
             ].map((src, i) => (
               <Image
